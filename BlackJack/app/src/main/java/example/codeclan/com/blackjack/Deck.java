@@ -1,6 +1,7 @@
 package example.codeclan.com.blackjack;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by user on 25/01/2018.
@@ -69,4 +70,8 @@ public class Deck {
         return new ArrayList<Card>(list);
     }
 
+    public void randomCard() {
+       Collections.shuffle(this.list);
+       list.get(0);
+    }
 }
