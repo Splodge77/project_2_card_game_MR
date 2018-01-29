@@ -65,4 +65,8 @@ public class Deck {
        list.add(new Card(CardName.TWO, Suit.DIAMONDS, 2));
    }
 
+    public ArrayList<Card> getList() {
+        return new ArrayList<Card>(list);
+    }
+
 }

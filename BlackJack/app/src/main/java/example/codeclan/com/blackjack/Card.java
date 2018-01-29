@@ -28,4 +28,8 @@ public class Card {
     public int getCardValue(){
         return this.cardValue;
     }
+
+    public int setCardValue(int newValue){
+        return this.cardValue = newValue;
+    }
 }

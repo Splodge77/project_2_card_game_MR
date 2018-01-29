@@ -13,9 +13,15 @@ import static org.junit.Assert.assertEquals;
 
 public class DeckTest {
 
+    Deck deck;
+
+    @Before
+    public void before(){
+        deck = new Deck();
+    }
+
     @Test
     public void getList(){
-        Deck deck = new Deck();
-        assertEquals(52, deck.getList().size);
+        assertEquals(52, deck.getList().size());
     }
 }
