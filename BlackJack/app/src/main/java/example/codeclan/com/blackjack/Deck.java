@@ -70,8 +70,9 @@ public class Deck {
         return new ArrayList<Card>(list);
     }
 
-    public void randomCard() {
+    public Card randomCard() {
        Collections.shuffle(this.list);
        list.get(0);
+       return null;
     }
 }
