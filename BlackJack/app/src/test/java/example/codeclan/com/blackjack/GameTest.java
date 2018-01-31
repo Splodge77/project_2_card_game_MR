@@ -10,11 +10,9 @@ import org.junit.Test;
 public class GameTest {
 
     Game game;
-    Player player;
 
     @Before
     public void before(){
         game = new Game();
-        player = new Player("bob");
     }
 }
