@@ -18,9 +18,11 @@ public class Game {
     }
 
     public int score(int value) {
-        Card card1 = hand.get(0);
-        Card card2 = hand.get(1);
-        return value + card1.getCardValue() + card2.getCardValue();
+        for(int i = 0; i < hand.size(); i++) {
+            Card cards = hand.get(i);
+            value = cards.getCardValue();
+        }
+        return value;
     }
 
     public void hit() {
