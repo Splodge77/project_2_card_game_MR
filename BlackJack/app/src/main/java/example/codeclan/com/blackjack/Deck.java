@@ -72,7 +72,7 @@ public class Deck {
 
     public Card randomCard() {
        Collections.shuffle(this.list);
-       list.get(0);
-       return null;
+       Card card = list.get(0);
+       return card;
     }
 }
