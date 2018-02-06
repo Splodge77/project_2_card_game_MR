@@ -32,7 +32,6 @@ public class Hand {
     public int setScore(){
         for(Card card : hand){
             int value = card.getCardValue();
-            score += value;
             if(value == 11 && score > 21){
                 score += 1;
             }
