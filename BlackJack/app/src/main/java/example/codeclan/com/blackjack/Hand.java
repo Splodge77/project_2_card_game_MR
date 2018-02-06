@@ -10,10 +10,11 @@ public class Hand {
 
     private ArrayList<Card> hand;
     private int score;
+    private int initialScore;
 
     public Hand(){
         this.hand = new ArrayList<>();
-        this.score = score;
+        this.initialScore = 0;
     }
 
     public void addCard(Card card){
@@ -32,7 +33,8 @@ public class Hand {
     public int setScore(){
         for(Card card : hand){
             int value = card.getCardValue();
-            if(value == 11 && score > 21){
+            initialScore += value;
+            if(value == 11 && initialScore > 21){
                 score += 1;
             }
             else score += value;

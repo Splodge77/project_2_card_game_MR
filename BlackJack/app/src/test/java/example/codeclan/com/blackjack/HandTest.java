@@ -38,4 +38,14 @@ public class HandTest {
         hand.setScore();
         assertEquals(17, hand.getScore());
     }
+
+    @Test
+    public void aceBecomesOne(){
+        card1 = new Card(CardName.ACE, Suit.SPADES, 11);
+        card2 = new Card(CardName.ACE, Suit.HEARTS, 11);
+        hand.addCard(card1);
+        hand.addCard(card2);
+        hand.setScore();
+        assertEquals(12, hand.getScore());
+    }
 }
