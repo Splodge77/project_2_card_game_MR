@@ -20,11 +20,27 @@ public class Game {
     }
 
     public int getScore() {
-        for(int i = 0; i < hand.size(); i++) {
+        int handLength = hand.size();
+        for(int i = 0; i < handLength; i++) {
             Card cards = hand.get(i);
-            score = cards.getCardValue();
         }
+        int newScore = cards.getCardValue();
+        setScore(newScore);
         return score;
+    }
+
+//    public int getScore() {
+//        int handLength = hand.size();
+//        for(int i = 0; i < handLength; i++) {
+//            Card cards = hand.get(i);
+//            int newScore = cards.getCardValue();
+//            setScore(newScore);
+//        }
+//        return score;
+//    }
+
+    public void setScore(int newScore){
+        this.score = newScore;
     }
 
     public void hit() {

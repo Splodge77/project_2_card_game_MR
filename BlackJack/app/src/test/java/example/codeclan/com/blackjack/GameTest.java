@@ -13,7 +13,8 @@ import static org.junit.Assert.assertEquals;
 public class GameTest {
 
     Game game;
-    Card card;
+    Card card1;
+    Card card2;
 
 
     @Before
@@ -23,8 +24,10 @@ public class GameTest {
 
     @Test
     public void handHasValue(){
-        card = new Card(CardName.KING, Suit.DIAMONDS, 10);
-        game.hand.add(card);
-        assertEquals(10, game.getScore());
+        card1 = new Card(CardName.KING, Suit.DIAMONDS, 10);
+        card2 = new Card(CardName.SEVEN, Suit.SPADES, 7);
+        game.hand.add(card1);
+        game.hand.add(card2);
+        assertEquals(17, game.getScore());
     }
 }
