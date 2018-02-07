@@ -54,4 +54,12 @@ public class PlayerTest {
         playerSticks();
         assertEquals(true, player.stick);
     }
+
+    @Test
+    public void handHasScore(){
+        Card card = new Card(CardName.ACE, Suit.SPADES);
+        player.addCard(card);
+        player.setScore();
+        assertEquals(11, player.getScore());
+    }
 }
