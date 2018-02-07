@@ -28,4 +28,8 @@ public enum CardName {
     public int getValue(){
         return value;
     }
+
+    public int setValue(int newValue){
+        return this.value = newValue;
+    }
 }

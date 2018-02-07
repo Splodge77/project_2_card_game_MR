@@ -27,7 +27,7 @@ public class Card {
         return this.cardName.getValue();
     }
 
-//    public int setCardValue(int newValue){
-//        return this.cardValue = newValue;
-//    }
+    public void setCardValue(int newValue) {
+        cardName.setValue(newValue);
+    }
 }

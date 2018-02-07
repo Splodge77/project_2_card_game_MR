@@ -23,10 +23,10 @@ public class CardTest {
 
     }
 
-//    @Test
-//    public void canSetCardValue(){
-//        assertEquals(11, card.getCardValue());
-//        card.setCardValue(1);
-//        assertEquals(1, card.getCardValue());
-//    }
+    @Test
+    public void canSetCardValue(){
+        assertEquals(11, card.getCardValue());
+        card.setCardValue(1);
+        assertEquals(1, card.getCardValue());
+    }
 }
