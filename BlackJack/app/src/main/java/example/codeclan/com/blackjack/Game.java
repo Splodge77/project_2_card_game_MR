@@ -8,38 +8,14 @@ import java.util.ArrayList;
 
 public class Game {
 
-    Deck deck;
-    public ArrayList<Card> dealerHand;
-    Player player;
-//    private ArrayList<Card> newCards;
 
-    public Game(){
-        this.dealerHand = new ArrayList<>();
-//        this.newCards = new ArrayList<>();
+    private ArrayList<Player> players;
+    Dealer dealer;
+
+
+    public Game(ArrayList<Player> players, Dealer dealer){
+        this.players = new ArrayList<>();
+        this.dealer = dealer;
     }
 
-    public void deal() {
-
-        do {
-            Card newCard = deck.randomCard();
-            player.addCard(newCard);
-        }
-        while (player.handSize() < 1);
-        do {
-            Card newCard = deck.randomCard();
-            dealerHand.add(newCard);
-        }
-        while (dealerHand.size() < 1);
-        do {
-            Card newCard = deck.randomCard();
-            dealerHand.add(newCard);
-        }
-        while (player.handSize() < 2);
-        do {
-            Card newCard = deck.randomCard();
-            dealerHand.add(newCard);
-        }
-        while (dealerHand.size() < 2);
-
-    }
 }
