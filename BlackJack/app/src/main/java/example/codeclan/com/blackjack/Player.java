@@ -6,20 +6,21 @@ import java.util.ArrayList;
  * Created by user on 06/02/2018.
  */
 
-public class Hand {
+public class Player {
 
     private ArrayList<Card> hand;
     private int score;
     private int initialScore;
     public boolean stick;
 
-    public Hand(){
+    public Player(){
         this.hand = new ArrayList<>();
         this.initialScore = 0;
         this.stick = false;
     }
 
     public void addCard(Card card){
+        if(stick == !true && playerIsBust() == !true)
         hand.add(card);
     }
 
@@ -32,7 +33,7 @@ public class Hand {
         return score;
     }
 
-    public void stick(){
+    public void playerSticks(){
         stick = true;
     }
 

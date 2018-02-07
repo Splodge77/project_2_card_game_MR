@@ -10,22 +10,19 @@ public class Game {
 
     Deck deck;
     public ArrayList<Card> dealerHand;
-    Hand hand;
+    Player player;
+    private ArrayList<Card> newCards;
 
     public Game(){
         this.dealerHand = new ArrayList<>();
-
+        this.newCards = new ArrayList<>();
     }
 
-    public void deal(){
-        Card card = deck.randomCard();
-        if (hand.handSize() < 1) {
-            hand.addCard(card);
+    public void deal() {
+        if (player.handSize() < 1 && dealerHand.size() < 2) {
+            for (Card card : deck.list) {
+                newCards.add(card);
+            }
         }
-        if (dealerHand.size() < 2) {
-            dealerHand.add(card);
-        }
-        hand.getScore();
     }
-
 }

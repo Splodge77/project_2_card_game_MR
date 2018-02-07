@@ -13,13 +13,19 @@ import static org.junit.Assert.assertEquals;
 public class GameTest {
 
     Game game;
-    Hand hand;
+    Player player;
 
 
     @Before
     public void before(){
         game = new Game();
-        hand = new Hand();
+        player = new Player();
+    }
+
+    @Test
+    public void playerHasOneCardAtStart(){
+        game.deal();
+        assertEquals(1, player.handSize());
     }
 
 }

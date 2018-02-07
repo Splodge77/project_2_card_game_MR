@@ -10,22 +10,22 @@ import static org.junit.Assert.assertEquals;
  * Created by user on 06/02/2018.
  */
 
-public class HandTest {
+public class PlayerTest {
 
-    Hand hand;
+    Player player;
     Card card;
     Card card1;
     Card card2;
 
     @Before
     public void before(){
-        hand = new Hand();
+        player = new Player();
     }
 
     @Test
     public void cardAdded(){
         card = new Card(CardName.JACK, Suit.DIAMONDS);
-        hand.addCard(card);
+        player.addCard(card);
         assertNotNull(card);
     }
 
@@ -33,26 +33,26 @@ public class HandTest {
     public void handHasValue(){
         card1 = new Card(CardName.KING, Suit.DIAMONDS);
         card2 = new Card(CardName.SEVEN, Suit.SPADES);
-        hand.addCard(card1);
-        hand.addCard(card2);
-        hand.setScore();
-        assertEquals(17, hand.getScore());
+        player.addCard(card1);
+        player.addCard(card2);
+        player.setScore();
+        assertEquals(17, player.getScore());
     }
 
     @Test
     public void aceBecomesOne(){
         card1 = new Card(CardName.ACE, Suit.SPADES);
         card2 = new Card(CardName.ACE, Suit.HEARTS);
-        hand.addCard(card1);
-        hand.addCard(card2);
-        hand.setScore();
-        assertEquals(12, hand.getScore());
+        player.addCard(card1);
+        player.addCard(card2);
+        player.setScore();
+        assertEquals(12, player.getScore());
     }
 
     @Test
     public void playerSticks(){
-        hand.stick();
-        assertEquals(true, hand.stick);
+        playerSticks();
+        assertEquals(true, player.stick);
     }
 
 
