@@ -3,6 +3,9 @@ package example.codeclan.com.blackjack;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
+import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
 
@@ -18,14 +21,15 @@ public class GameTest {
 
     @Before
     public void before(){
-        game = new Game();
+        game = new Game(new Dealer());
         player = new Player();
+        game.addPlayer(player);
     }
 
     @Test
-    public void playerHasOneCardAtStart(){
-        game.deal();
-        assertEquals(1, player.handSize());
+    public void playerHasCards(){
+        game.start();
+        assertEquals(2, player.handSize());
     }
 
 }

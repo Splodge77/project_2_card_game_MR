@@ -9,7 +9,7 @@ public class Dealer extends Player {
 
     Deck deck;
 
-    public Dealer(Deck deck){
+    public Dealer(){
         this.deck = new Deck();
     }
 

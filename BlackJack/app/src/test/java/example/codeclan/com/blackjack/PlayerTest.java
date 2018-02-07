@@ -50,10 +50,8 @@ public class PlayerTest {
     }
 
     @Test
-    public void playerSticks(){
+    public void playerSticks() {
         playerSticks();
         assertEquals(true, player.stick);
     }
-
-
 }
