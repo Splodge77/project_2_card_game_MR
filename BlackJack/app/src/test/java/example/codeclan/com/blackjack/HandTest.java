@@ -48,4 +48,10 @@ public class HandTest {
         hand.setScore();
         assertEquals(12, hand.getScore());
     }
+
+    @Test
+    public void playerSticks(){
+        hand.stick();
+        assertEquals(true, hand.stick);
+    }
 }

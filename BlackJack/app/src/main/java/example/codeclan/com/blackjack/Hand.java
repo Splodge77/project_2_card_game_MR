@@ -11,10 +11,12 @@ public class Hand {
     private ArrayList<Card> hand;
     private int score;
     private int initialScore;
+    public boolean stick;
 
     public Hand(){
         this.hand = new ArrayList<>();
         this.initialScore = 0;
+        this.stick = false;
     }
 
     public void addCard(Card card){
@@ -28,6 +30,17 @@ public class Hand {
 
     public int getScore() {
         return score;
+    }
+
+    public void stick(){
+        stick = true;
+    }
+
+    public boolean playerIsBust(){
+        if (getScore() > 21){
+            return true;
+        }
+        else return false;
     }
 
     public int setScore(){
