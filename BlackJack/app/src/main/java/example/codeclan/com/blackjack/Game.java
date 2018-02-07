@@ -11,18 +11,35 @@ public class Game {
     Deck deck;
     public ArrayList<Card> dealerHand;
     Player player;
-    private ArrayList<Card> newCards;
+//    private ArrayList<Card> newCards;
 
     public Game(){
         this.dealerHand = new ArrayList<>();
-        this.newCards = new ArrayList<>();
+//        this.newCards = new ArrayList<>();
     }
 
     public void deal() {
-        if (player.handSize() < 1 && dealerHand.size() < 2) {
-            for (Card card : deck.list) {
-                newCards.add(card);
-            }
+
+        do {
+            Card newCard = deck.randomCard();
+            player.addCard(newCard);
         }
+        while (player.handSize() < 1);
+        do {
+            Card newCard = deck.randomCard();
+            dealerHand.add(newCard);
+        }
+        while (dealerHand.size() < 1);
+        do {
+            Card newCard = deck.randomCard();
+            dealerHand.add(newCard);
+        }
+        while (player.handSize() < 2);
+        do {
+            Card newCard = deck.randomCard();
+            dealerHand.add(newCard);
+        }
+        while (dealerHand.size() < 2);
+
     }
 }
