@@ -14,7 +14,7 @@ public class CardTest {
     Card card;
 
     @Before
-    public void before(){ card = new Card(CardName.ACE, Suit.HEARTS, 11);}
+    public void before(){ card = new Card(CardName.ACE, Suit.HEARTS);}
 
 
     @Test

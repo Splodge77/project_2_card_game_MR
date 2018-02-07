@@ -24,15 +24,15 @@ public class HandTest {
 
     @Test
     public void cardAdded(){
-        card = new Card(CardName.JACK, Suit.DIAMONDS, 10);
+        card = new Card(CardName.JACK, Suit.DIAMONDS);
         hand.addCard(card);
         assertNotNull(card);
     }
 
     @Test
     public void handHasValue(){
-        card1 = new Card(CardName.KING, Suit.DIAMONDS,10);
-        card2 = new Card(CardName.SEVEN, Suit.SPADES, 7);
+        card1 = new Card(CardName.KING, Suit.DIAMONDS);
+        card2 = new Card(CardName.SEVEN, Suit.SPADES);
         hand.addCard(card1);
         hand.addCard(card2);
         hand.setScore();
@@ -41,8 +41,8 @@ public class HandTest {
 
     @Test
     public void aceBecomesOne(){
-        card1 = new Card(CardName.ACE, Suit.SPADES, 11);
-        card2 = new Card(CardName.ACE, Suit.HEARTS, 11);
+        card1 = new Card(CardName.ACE, Suit.SPADES);
+        card2 = new Card(CardName.ACE, Suit.HEARTS);
         hand.addCard(card1);
         hand.addCard(card2);
         hand.setScore();
