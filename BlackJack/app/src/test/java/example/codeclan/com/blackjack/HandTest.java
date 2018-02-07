@@ -31,7 +31,7 @@ public class HandTest {
 
     @Test
     public void handHasValue(){
-        card1 = new Card(CardName.KING, Suit.DIAMONDS, 10);
+        card1 = new Card(CardName.KING, Suit.DIAMONDS,10);
         card2 = new Card(CardName.SEVEN, Suit.SPADES, 7);
         hand.addCard(card1);
         hand.addCard(card2);
@@ -54,4 +54,6 @@ public class HandTest {
         hand.stick();
         assertEquals(true, hand.stick);
     }
+
+
 }

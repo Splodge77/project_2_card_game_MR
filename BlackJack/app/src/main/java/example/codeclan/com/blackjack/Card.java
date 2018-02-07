@@ -9,12 +9,10 @@ public class Card {
 
     private CardName cardName;
     private Suit suit;
-    int cardValue;
 
-    public Card(CardName cardName, Suit suit, int cardValue){
+    public Card(CardName cardName, Suit suit, int value){
         this.cardName = cardName;
         this.suit = suit;
-        this.cardValue = cardValue;
     }
 
     public Suit getSuit(){
@@ -26,10 +24,10 @@ public class Card {
     }
 
     public int getCardValue(){
-        return this.cardValue;
+        return this.cardName.getValue();
     }
 
-    public int setCardValue(int newValue){
-        return this.cardValue = newValue;
-    }
+//    public int setCardValue(int newValue){
+//        return this.cardValue = newValue;
+//    }
 }
