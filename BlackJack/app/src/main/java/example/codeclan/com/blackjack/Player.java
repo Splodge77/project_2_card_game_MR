@@ -55,4 +55,22 @@ public class Player {
         }
         return score;
     }
+
+    public String getCardNames() {
+        for (Card card : hand) {
+            String name = card.getCardName().toString();
+            return name;
+        }
+        return null;
+    }
+
+    public String getCardSuits(){
+        for (Card card : hand){
+            String suit = card.getSuit().toString();
+            return suit;
+        }
+        return null;
+    }
+
+
 }

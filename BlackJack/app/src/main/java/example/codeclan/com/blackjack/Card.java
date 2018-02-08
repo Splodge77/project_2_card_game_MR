@@ -1,6 +1,8 @@
 package example.codeclan.com.blackjack;
 
 
+import java.util.ArrayList;
+
 /**
  * Created by user on 25/01/2018.
  */
@@ -30,4 +32,6 @@ public class Card {
     public void setCardValue(int newValue) {
         cardName.setValue(newValue);
     }
+
+
 }
