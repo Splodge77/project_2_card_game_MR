@@ -64,13 +64,12 @@ public class Player {
         return null;
     }
 
-    public String getCardSuits(){
-        for (Card card : hand){
+    public String getCardSuits() {
+        for (Card card : hand) {
             String suit = card.getSuit().toString();
             return suit;
         }
         return null;
     }
-
 
 }
