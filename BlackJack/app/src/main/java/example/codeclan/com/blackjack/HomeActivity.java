@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         TextView playersHand = findViewById(R.id.playersHand);
         playersHand.setText(playerHand);
 
-        String result = game.start();
+        String result = game.checkWinner();
         TextView resultView = findViewById(R.id.result);
         resultView.setText(result.toString());
     }

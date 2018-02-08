@@ -18,18 +18,13 @@ public class Game {
         this.dealer = dealer;
     }
 
-    public String start(){
+    public void start(){
         for (Player player : this.players){
             while (player.handSize() < 2){
                 dealer.deal(player);
                 player.setScore();
             }
-            if (player.getScore() > dealer.getScore()){
-                return "Player Wins";
-            }
-            else return "Dealer Wins";
-        }
-        return "It's a Draw";
+        } checkWinner();
     }
 
     public void addPlayer(Player player) {
@@ -38,13 +33,11 @@ public class Game {
 
 
 
-//    public String checkWinner(){
-//        for (Player player : this.players){
-//            if (player.getScore() > dealer.getScore()){
-//                return "Player Wins";
-//            }
-//            else return "Dealer Wins";
-//        }
-//        return "It's a Draw";
-//    }
+    public String checkWinner(){
+        for (Player player : this.players){
+            if (player.getScore() > dealer.getScore() && player.playerIsBust()==false){
+                return "Player Wins";
+            }
+        } return "Dealer Wins";
+    }
 }
