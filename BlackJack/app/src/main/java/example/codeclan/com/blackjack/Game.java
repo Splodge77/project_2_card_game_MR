@@ -18,7 +18,9 @@ public class Game {
         this.dealer = dealer;
     }
 
-    public void start(){
+    public void play(){
+        Player newPlayer = new Player();
+        players.add(newPlayer);
         for (Player player : this.players){
             while (player.handSize() < 2){
                 dealer.deal(player);
@@ -30,8 +32,6 @@ public class Game {
     public void addPlayer(Player player) {
         this.players.add(player);
     }
-
-
 
     public String checkWinner(){
         for (Player player : this.players){

@@ -20,7 +20,7 @@ public class HomeActivity extends AppCompatActivity {
     public void onPlayButtonClicked(View playButton){
         Game game = new Game(new Dealer());
         Player player = new Player();
-        game.start();
+        game.play();
 
         String dealerHand = game.dealer.getCardNames();
         TextView dealersHand = findViewById(R.id.dealersHand);
